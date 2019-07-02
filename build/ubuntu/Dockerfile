@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 
 # Install core requirements for oh-my-zsh
 RUN apt-get update \
