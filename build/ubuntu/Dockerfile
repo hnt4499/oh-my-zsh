@@ -1,10 +1,12 @@
 FROM ubuntu:16.04
 
 # Install core requirements for oh-my-zsh
+# The package 'software-properties-common is to add package directory using add-apt-repository.
 RUN apt-get update \
     && apt-get -y install git-core \
                           curl \
-                          zsh
+                          zsh \
+                          software-properties-common 
 
 # Install oh-my-zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/hnt4499/oh-my-zsh/master/tools/install.sh)"
@@ -13,6 +15,15 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/hnt4499/oh-my-zsh/mast
 RUN apt-get -y install locales \
                        fonts-powerline \
     && locale-gen en_US.UTF-8
+
+# Install vim 8.0 and SpaceVim
+RUN add-apt-repository ppa:jonathonf/vim \
+    && apt-get update \
+    && apt-get -y install vim \
+    && curl -sLf https://spacevim.org/install.sh | bash
+
+# Install necessary packages for "make" and compile vimproc
+RUN 
 
 CMD ["zsh"]
 
