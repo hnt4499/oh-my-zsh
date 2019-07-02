@@ -23,7 +23,7 @@ RUN add-apt-repository ppa:jonathonf/vim \
     && curl -sLf https://spacevim.org/install.sh | bash
 
 # Install necessary packages for "make" and compile vimproc
-RUN 
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/hnt4499/oh-my-zsh/master/tools/vimproc.sh)"
 
 CMD ["zsh"]
 
