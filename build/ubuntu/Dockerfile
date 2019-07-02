@@ -4,7 +4,7 @@ FROM ubuntu:latest
 RUN apt-get update \
     && apt-get -y install git-core \
                           curl \
-                          zsh \
+                          zsh
 
 # Install oh-my-zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/hnt4499/oh-my-zsh/master/tools/install.sh)"
