@@ -70,8 +70,6 @@ DISABLE_LS_COLORS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
-source $ZSH/oh-my-zsh.sh
-
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -97,3 +95,10 @@ export LC_ALL=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+# Fix `zsh-autosuggestions` color issue
+# Refer to https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg for full color chart.
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
+
+# Source the file
+source $ZSH/oh-my-zsh.sh
