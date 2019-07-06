@@ -4,7 +4,7 @@
 #   sh -c "$(curl -fsSL https://raw.githubusercontent.com/hnt4499/oh-my-zsh/master/tools/vimproc.sh)"
 
 # Install necessary packages
-apt-get install -y build-essential make
+apt-get install -y --no-install-recommends build-essential make
 
 # Clone official repository and compile
 git clone https://github.com/Shougo/vimproc.vim.git
